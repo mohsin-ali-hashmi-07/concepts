@@ -1,0 +1,18 @@
+<!-- so we dont have to write same HTML again and again just write ng content -->
+
+<p>child works!</p>
+<ng-content select="[mohsinName]"></ng-content>
+<p>I am in between two selectes</p>
+<ng-content select="[decripted]"></ng-content>
+
+<hr>
+
+<!-- just like we use fragment in react we use ng-container here to not introduce to DOM -->
+
+<div *ngFor="let number of numbers">
+    <ng-container *ngIf="number % 2 == 0">{{number}}</ng-container>
+</div>
+<hr>
+<!-- when we use template we dont use *ngIf we use [ngIf] only -->
+<div *ngIf="false else elseBlock">Condition is true</div>
+<ng-template #elseBlock><div>your condition is false</div></ng-template>
