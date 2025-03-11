@@ -5,7 +5,17 @@
   "projects": {
     "angular-concept": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -92,5 +102,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "a7a324ae-36e4-45f6-b72b-0fc713133c22"
   }
 }
